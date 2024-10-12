@@ -3,10 +3,12 @@
 
 var formulario = document.querySelector(".formulario");
 
-function aparecerFormulario(){
-    formulario.style.left = "30%";
+function aparecerFormulario() {
+    document.querySelector(".overlay").style.display = "block";
+    document.querySelector(".formulario").style.display = "block";
 }
 
-function desaparecerFormulario(){
-    formulario.style.left = "-50%";
+function desaparecerFormulario() {
+    document.querySelector(".overlay").style.display = "none";
+    document.querySelector(".formulario").style.display = "none";
 }

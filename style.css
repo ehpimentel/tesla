@@ -82,13 +82,30 @@ button {
 }
 
 
-.formulario{
+.overlay {
     position: fixed;
-    overflow: auto;
-    top: 40px;
-    width: 600px;
-    height: 100%;
-    z-index: 3;
-    left: -50%;
-    transition: 1.5s;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    display: none; /* Inicialmente escondido */
+    z-index: 999; /* Sobrepõe todo o conteúdo */
+}
+
+.formulario {
+    position: fixed;
+    width: 50%; /* Largura ajustada para 90% da largura da viewport */
+    height: 90%; /* Altura ajustada para 90% da altura da viewport */
+    top: 50%;
+    left: 50%;
+    overflow-y: auto; /* Garantir que a rolagem vertical seja ativada */
+    overflow-x: hidden; /* Evitar rolagem horizontal, se desnecessário */
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    display: none;
 }
